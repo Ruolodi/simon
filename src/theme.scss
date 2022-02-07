@@ -9,10 +9,8 @@ body {
   background: #001f3f;
 }
 .container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
+  margin: 0 auto 0 auto;
   height: 400px;
   width: 500px;
   border-radius: 10px;
@@ -26,8 +24,61 @@ body {
   .card {
     width: 150px;
     height: 150px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(90, 0, 0);
     margin: 20px;
     border-radius: 10px;
+      &:active{
+        background-color:rgb(179, 0, 0);
+      }
   }
+  .card1 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(6, 68, 0);
+    margin: 20px;
+    border-radius: 10px;
+      &:active{
+        background-color:rgb(13, 160, 0);
+      }
+  }
+  .card2 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(0, 7, 68);
+    margin: 20px;
+    border-radius: 10px;
+      &:active{
+        background-color:rgb(0, 11, 160);
+      }
+      
+  }
+  .card3 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(163, 152, 0);
+    margin: 20px;
+    border-radius: 10px;
+      &:active{
+        background-color:rgb(255, 246, 126);
+      }
+  }
+}
+.start{
+  position: relative;
+  width: 50px;
+  margin: 10px 0 10px 0;
+  height: fit-content;
+  background-color: cadetblue;
+  border-radius: 5px;
+}
+.mainBlock{
+  background-color: rgb(255, 255, 255);
+  position: static;
+  margin: 15vmax auto 0 auto;
+  border: 2px solid red;
+  width: 500px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
