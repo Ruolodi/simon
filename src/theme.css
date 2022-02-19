@@ -173,6 +173,10 @@ body {
   background-color: #b30000;
 }
 
+.container .card.active {
+  background-color: #b30000;
+}
+
 .container .card1 {
   width: 150px;
   height: 150px;
@@ -182,6 +186,10 @@ body {
 }
 
 .container .card1:active {
+  background-color: #0da000;
+}
+
+.container .card1.active {
   background-color: #0da000;
 }
 
@@ -197,6 +205,10 @@ body {
   background-color: #000ba0;
 }
 
+.container .card2.active {
+  background-color: #000ba0;
+}
+
 .container .card3 {
   width: 150px;
   height: 150px;
@@ -209,6 +221,10 @@ body {
   background-color: #fff67e;
 }
 
+.container .card3.active {
+  background-color: #fff67e;
+}
+
 .start {
   position: relative;
   width: 50px;
@@ -218,6 +234,7 @@ body {
   height: fit-content;
   background-color: cadetblue;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .mainBlock {
