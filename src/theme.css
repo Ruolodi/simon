@@ -225,6 +225,10 @@ body {
   background-color: #fff67e;
 }
 
+.container.min {
+  height: 50px;
+}
+
 .start {
   position: relative;
   width: 50px;
@@ -254,5 +258,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.mainBlock .check {
+  font-size: 30px;
 }
 /*# sourceMappingURL=theme.css.map */

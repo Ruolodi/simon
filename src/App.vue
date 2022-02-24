@@ -1,5 +1,8 @@
 <template>
   <div class="mainBlock">
+    <div class="container min">
+      <div class="check">Ваш рекорд: {{ finallyUserCheck }}</div>
+    </div>
     <div class="container">
       <button
         :class="cardNumber === 1 ? 'card active' : 'card'"
@@ -25,6 +28,7 @@
     <button class="start" v-if="isStarting === false" @click="start">
       Start
     </button>
+    <div class="check" v-if="isStarting">Ваш счет: {{ userCheckRecord }}</div>
   </div>
 </template>
 
@@ -39,6 +43,8 @@ export default {
       canPlay: false,
       cardNumber: 0,
       isMistake: false,
+      userCheckRecord: 0,
+      finallyUserCheck: 0,
     }
   },
   methods: {
@@ -63,15 +69,21 @@ export default {
       }, 300)
     },
     clickUser(id) {
+      this.userCheckRecord++
+      if (this.finallyUserCheck < this.userCheckRecord) {
+        this.finallyUserCheck = this.userCheckRecord
+      } //приравнивание счета к рекорду
       this.arrUser.push(id)
       this.isMistake =
         this.arrUser[this.arrUser.length - 1] !==
-        this.arrComp[this.arrUser.length - 1] //Сравнение массивов
+        this.arrComp[this.arrUser.length - 1] //Сравнение массивов на последний элемент
       if (this.isMistake) {
         this.isStarting = false
         this.arrUser.length = 0
         this.arrComp.length = 0
+        this.userCheckRecord = 0
       } else if (this.arrUser.length === this.arrComp.length) {
+        //сравнение на длинну массивов
         this.arrUser.length = 0
         this.start()
       }

@@ -74,6 +74,9 @@ body {
     background-color: rgb(255, 246, 126);
   }
 }
+.container.min {
+  height: 50px;
+}
 .start {
   position: relative;
   width: 50px;
@@ -93,4 +96,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  .check {
+    font-size: 30px;
+  }
 }
